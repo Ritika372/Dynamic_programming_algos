@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  <title> <%= title %> </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/"> Dynamic Programming <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main role="main">
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2 class="display-3"><%= title %></h2><br>
+        <p><%= questioname %></p>
+        <p><%= tc %></p>
+      </div>
+    </div>
+    <div class="container">
+      <% if(title === "0/1 Knapsack Problem"){ %>
+      <form action="/knapsack" method="post">
+        <div class="form-group">
+          <label for="size">Enter size</label>
+          <input type="text" class="form-control" name="size">
+        </div>
+        <div class="form-group">
+          <label for="cap">Enter total capacity</label>
+          <input type="text" class="form-control" name="cap">
+        </div>
+        <div class="form-group">
+          <label for="weights">Enter weight of all items seperated by space.</label>
+          <input type="text" class="form-control" name="weights">
+        </div>
+        <div class="form-group">
+          <label for="values">Enter values of all items separated by space.</label>
+          <input type="text" class="form-control" name="values">
+        </div>
+        <button type="submit" class="btn btn-primary">Give Output</button>
+      </form>
+  <% } else if(title === "Longest Increasing Subsequence") { %>
+    <form action="/longest" method="post">
+      <div class="form-group">
+        <label for="size">Enter size</label>
+        <input type="text" class="form-control" name="size">
+      </div>
+      <div class="form-group">
+        <label for="array">Enter elements seperated by space.</label>
+        <input type="text" class="form-control" name="array">
+      </div>
+      <button type="submit" class="btn btn-primary">Give Output</button>
+    </form>
+  <% } else if(title === "Matrix Chain Multiplication"){ %>
+    <form action="/matrix" method="post">
+      <div class="form-group">
+        <label for="size">Enter size</label>
+        <input type="text" class="form-control" name="size">
+      </div>
+      <div class="form-group">
+        <label for="array">Enter elements seperated by space.</label>
+        <input type="text" class="form-control" name="array">
+      </div>
+      <button type="submit" class="btn btn-primary">Give Output</button>
+    </form>
+    <% } else if(title === "All Pair Shortest Path") { %>
+      <form action="/allpair" method="post">
+        <div class="form-group">
+          <label for="size">Enter number of vertices.</label>
+          <input type="text" class="form-control" name="size">
+        </div>
+        <div class="form-group">
+          <label for="array">Enter verties*vertices adjacency matrix in a row wise fashion separated by space. <br><em>* Note that graph[i][j] is 0 if i == j and is <b>"^"</b> if there is no edge from vertex i to j<em></label>
+          <input type="text" class="form-control" name="array">
+        </div>
+        <button type="submit" class="btn btn-primary">Give Output</button>
+      </form>
+    <hr>
+    </div>
+  <% } else if( title === "Assembly Line Scheduling") {%>
+  <form action="/assembly" method="post">
+    <div class="form-group">
+      <label for="size">Enter number of stations.</label>
+      <input type="text" class="form-control" name="size">
+    </div>
+    <div class="form-group">
+      <label for="a1">Enter time a car stays at a station in a row wise fashion separated by space.</label>
+      <input type="text" class="form-control" name="a1">
+    </div>
+    <div class="form-group">
+      <label for="t1">Enter time to transfer a car from 1 station to other station in a row wise fashion separated by space.</label>
+      <input type="text" class="form-control" name="t1">
+    </div>
+    <div class="form-group">
+      <label for="e1">Enter entry time for the two asembly lines separated by space.</label>
+      <input type="text" class="form-control" name="e1">
+    </div>
+    <div class="form-group">
+      <label for="x1">Enter exit time for the two assembly lines separated by space.</label>
+      <input type="text" class="form-control" name="x1">
+    </div>
+    <button type="submit" class="btn btn-primary">Give Output</button>
+  </form>
+<hr>
+</div>
+<% } %>
+  </main>
+
+  <br><br>
+  </body>
+  <footer >
+    <p>&copy; Ritika Goyal</p>
+  </footer>
+
+
+</html>
